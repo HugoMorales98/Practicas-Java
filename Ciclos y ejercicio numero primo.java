@@ -50,39 +50,74 @@ public class Ciclos {
         System.out.println("Ha introducido: " + valor);
 
         
+    // Ejemplo de FOR para imprimir los numeros del 1 al 10
+        
+        /* For (inicializacion; condicion; actualizacion){
+         * ....
+         * }
+         */
+  
+        for (int numeroActual = 1; numeroActual <= 10; numeroActual++) {
+        	System.out.println("Ha introcuciodo: " + valor);
+        }
+        
+        
+        // Otro ejemplo de FOR para imprimir hola 5 veces
+        for (int valorFor = 1;valorFor <5; valorFor++) {
+        	System.out.println("Hola");
+        }
+        
+        // Hack para determinar de forma rapida donde inicia y donde termina
+        for (int valorFor2 = 1;valorFor2 <5; valorFor2++) {
+        	System.out.println("Hola Caracola" + valorFor2);
+        }
+        
+        // Arreglo de elementos
+        
+        int[] numeritos = {1, 2, 3, 4, 5};
+        
+        
+        for (int elemento = 0; elemento<numeritos.length; elemento++) {
+        	System.out.println(numeritos[elemento]);
+        }
+        
+        // Impresion de una lista de supermercado
+        
+        String [] listaSuper = {"Botanas", "Maruchan", "Panales", "Kinder Buenos", "Verduras", "Mayonesa", "Galletas", "Webito"};
+         
+                for (int producto = 0; producto<listaSuper.length; producto++) {
+                	System.out.println(listaSuper[producto]);
+                }
         // Ejercicio 2
        // Escribir un programa que pida al usuario un numero entero y muestre por pantalla si es un numero primo o no
         
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce un número entero: ");
-        int num = sc.nextInt();  // Lee un número entero desde la entrada estándar
-        sc.close();  // Cierra el objeto Scanner
+        int num = sc.nextInt();
+        sc.close();
         
-        boolean esPrimo = esPrimo(num);  // Llama a la función esPrimo y guarda el resultado en la variable esPrimo
+        boolean esPrimo = esPrimo(num);
         
-        // Utiliza la estructura switch para imprimir el mensaje adecuado según el valor de esPrimo
-        switch (esPrimo) {
-            case true:
-                System.out.println(num + " es un número primo.");
-                break;
-            case false:
-                System.out.println(num + " no es un número primo.");
-                break;
+        if (esPrimo) {
+            System.out.println(num + " es un número primo.");
+        } else {
+            System.out.println(num + " no es un número primo.");
         }
     }
     
-    // Función que determina si un número es primo o no
     public static boolean esPrimo(int num) {
         int i = 2;
-        while (i <= Math.sqrt(num) && num % i != 0) {  // Itera desde 2 hasta la raíz cuadrada de num buscando un divisor
+        while (i <= Math.sqrt(num) && num % i != 0) {
             i++;
         }
-        return i > Math.sqrt(num);  // Si no se encontró un divisor, el número es primo y se devuelve true; de lo contrario, se devuelve false
+        return i > Math.sqrt(num);        
         
-        
+    }   
+
+}
 		
-		}
-	}
+		
+	
 
 
 
@@ -120,7 +155,31 @@ do {
 } while (condicion);
 
 otro codigo;
+		
+
+
+
+For (para)
+
+
+  /* For (inicializacion; condicion; actualizacion){
+         * ....
+         * }
+         
+
+Inicializacion: expresion que se ejecuta al inicio del bucle, generalmente se usa para inicializar el contador
+
+condicion: Expresion booleana que se evalua en cada iteracion (cada vuelta), si la condicion es verdadera, se ejecuta el bloque de codigo. Si es falsa, se sale del ciclo.
+
+actualizacion: la expresion del principio se ira actualizando al final de cada iteracion
+
+*/
 
 		
 		
+		
+		
 */
+
+
+		
